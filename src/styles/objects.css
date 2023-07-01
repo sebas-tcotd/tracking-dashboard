@@ -1,5 +1,6 @@
 @layer objects {
   .o-container {
-    width: 75%;
+    width: calc(100% - 32px);
+    margin: 2rem auto;
   }
 }

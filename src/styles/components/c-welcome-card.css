@@ -1,0 +1,57 @@
+@import url("../settings.css");
+
+@layer components {
+  .c-welcome-card {
+    background-color: var(--dark-blue);
+    border-radius: 14px;
+    overflow: hidden;
+  }
+
+  .c-welcome-card__header {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    gap: 1rem;
+    justify-content: center;
+    border-radius: 14px;
+    background-color: var(--blue);
+  }
+
+  .c-welcome-card__photo {
+    height: 25%;
+    width: 25%;
+    border: 3px solid var(--white);
+    border-radius: 100%;
+  }
+
+  .c-welcome-card__info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .c-welcome-card__info > * {
+    margin: 0;
+    font-weight: 300;
+  }
+
+  .c-welcome-card__report {
+    font-size: calc(var(--fs) * 0.85px);
+  }
+
+  .c-welcome-card__user-name {
+    font-size: calc(var(--fs) * 1.5px);
+  }
+
+  .c-welcome-card__navigation-items {
+    margin: 0;
+    padding: 2rem 2.25rem;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .c-welcome-card__navigation-item {
+    color: var(--desaturated-blue);
+  }
+}
