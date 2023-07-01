@@ -3,9 +3,40 @@
     width: calc(100% - 3rem);
     margin: 4rem auto;
   }
+  @media screen and (min-width: 768px) {
+    .o-container {
+      margin: 0 auto;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    .o-container {
+      width: calc(100% - 12rem);
+    }
+  }
+  @media screen and (min-width: 1440px) {
+    .o-container {
+      width: calc(100% - 24rem);
+    }
+  }
+  @media screen and (min-width: 2560px) {
+    .o-container {
+      width: calc(100% - 72rem);
+    }
+  }
 
   .o-dashboard {
     display: grid;
     gap: 1.5rem;
+  }
+  @media screen and (min-width: 768px) {
+    .o-dashboard {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+    }
+  }
+  @media screen and (min-width: 1440px) {
+    .o-dashboard {
+      height: calc(100% / 2);
+    }
   }
 }

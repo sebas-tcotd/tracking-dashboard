@@ -14,6 +14,7 @@
   }
 
   .c-card__body {
+    --margin-separation: 2.5rem;
     background-color: var(--dark-blue);
     border-radius: 14px;
     display: flex;
@@ -21,7 +22,13 @@
     gap: 0.5rem;
     padding: 2rem;
     position: relative;
-    margin-top: 2.5rem;
+    margin-top: var(--margin-separation);
+    height: calc(100% - var(--margin-separation));
+  }
+  @media screen and (min-width: 1024px) {
+    .c-card__body {
+      gap: 1.5rem;
+    }
   }
 
   .c-card__heading {
@@ -48,16 +55,34 @@
     justify-content: space-between;
     align-items: center;
   }
+  @media screen and (min-width: 768px) {
+    .c-card__data {
+      flex-direction: column;
+      gap: 0.5rem;
+      align-items: flex-start;
+    }
+  }
+ 
 
   .c-card__data-current {
     font-weight: 300;
     font-size: calc(var(--fs) * 1.75px);
+  }
+  @media screen and (min-width: 1440px) {
+    .c-card__data-current {
+      font-size: calc(var(--fs) * 2.75px);
+    }
   }
 
   .c-card__data-previous {
     text-align: right;
     font-size: calc(var(--fs) * 0.75px);
     color: var(--pale-blue);
+  }
+  @media screen and (min-width: 768px) {
+    .c-card__data-previous {
+      text-align: start;
+    }
   }
 
   .c-card--Work {
