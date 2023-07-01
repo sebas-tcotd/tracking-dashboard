@@ -1,6 +1,11 @@
 @layer objects {
   .o-container {
-    width: calc(100% - 32px);
-    margin: 2rem auto;
+    width: calc(100% - 3rem);
+    margin: 4rem auto;
+  }
+
+  .o-dashboard {
+    display: grid;
+    gap: 1.5rem;
   }
 }
