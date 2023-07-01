@@ -116,12 +116,13 @@
     }
   }
 
-  .c-welcome-card__navigation-item > a {
+  .c-welcome-card__navigation-item {
     color: var(--desaturated-blue);
+    cursor: pointer;
     text-decoration: none;
     transition: all 0.5s;
   }
-  .c-welcome-card__navigation-item > a:hover {
+  .c-welcome-card__navigation-item:hover {
     color: var(--white);
   }
 }

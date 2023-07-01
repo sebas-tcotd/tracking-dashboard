@@ -1,26 +1,30 @@
 import PropTypes from "prop-types";
 import ellipsisIcon from "../assets/icon-ellipsis.svg";
-import { useCardType } from "../hooks/useCardType";
+import { useCardType, useTimePeriod } from "../hooks";
 
-export function Card({ category }) {
-  const { categoryData, iconPath } = useCardType(category);
+export function Card({ category, timeframe }) {
+  const {
+    categoryData: { title, timeframes },
+    iconPath,
+  } = useCardType(category);
+  const timePeriod = useTimePeriod(timeframe);
 
   return (
     <div className={`c-card c-card--${category}`}>
       <img className="c-card__icon" src={iconPath} />
       <div className="c-card__body">
         <div className="c-card__heading">
-          <h5 className="c-card__heading-headline">{categoryData.title}</h5>
+          <h5 className="c-card__heading-headline">{title}</h5>
           <button type="button" className="c-card__heading-button">
             <img src={ellipsisIcon} alt="" />
           </button>
         </div>
         <div className="c-card__data">
           <span className="c-card__data-current">
-            {categoryData.timeframes.weekly.current}hrs
+            {timeframes[timeframe].current}hrs
           </span>
           <span className="c-card__data-previous">
-            Last Week - {categoryData.timeframes.weekly.previous}hrs
+            Last {timePeriod} - {timeframes[timeframe].current}hrs
           </span>
         </div>
       </div>
@@ -30,4 +34,5 @@ export function Card({ category }) {
 
 Card.propTypes = {
   category: PropTypes.string,
+  timeframe: PropTypes.string,
 };
