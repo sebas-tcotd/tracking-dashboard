@@ -16,9 +16,15 @@ export function WelcomeCard() {
       </header>
       <nav className="c-welcome-card__navigation">
         <ul className="c-welcome-card__navigation-items">
-          <li className="c-welcome-card__navigation-item">Daily</li>
-          <li className="c-welcome-card__navigation-item">Weekly</li>
-          <li className="c-welcome-card__navigation-item">Monthly</li>
+          <li className="c-welcome-card__navigation-item">
+            <a href="">Daily</a>
+          </li>
+          <li className="c-welcome-card__navigation-item">
+            <a href="">Weekly</a>
+          </li>
+          <li className="c-welcome-card__navigation-item">
+            <a href="">Monthly</a>
+          </li>
         </ul>
       </nav>
     </div>

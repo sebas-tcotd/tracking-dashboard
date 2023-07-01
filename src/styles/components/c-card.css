@@ -24,6 +24,11 @@
     position: relative;
     margin-top: var(--margin-separation);
     height: calc(100% - var(--margin-separation));
+    transition: all 0.5s;
+  }
+  .c-card__body:hover {
+    background-color: var(--american-blue);
+    cursor: pointer;
   }
   @media screen and (min-width: 1024px) {
     .c-card__body {
@@ -48,6 +53,11 @@
     background-color: transparent;
     border: 0;
     padding: 0;
+    cursor: pointer;
+    transition: all 0.5s;
+  }
+  .c-card__heading-button:hover > img {
+    filter: brightness(75);
   }
 
   .c-card__data {
@@ -62,7 +72,6 @@
       align-items: flex-start;
     }
   }
- 
 
   .c-card__data-current {
     font-weight: 300;
