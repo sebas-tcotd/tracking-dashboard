@@ -1,0 +1,85 @@
+@import url("../settings.css");
+
+@layer components {
+  .c-card {
+    border-radius: 14px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .c-card__icon {
+    position: absolute;
+    right: 1rem;
+    top: -0.625rem;
+  }
+
+  .c-card__body {
+    background-color: var(--dark-blue);
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 2rem;
+    position: relative;
+    margin-top: 2.5rem;
+  }
+
+  .c-card__heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .c-card__heading-headline {
+    margin: 0;
+    font-size: var(--fs);
+    font-weight: 400;
+  }
+
+  .c-card__heading-button {
+    display: flex;
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+  }
+
+  .c-card__data {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .c-card__data-current {
+    font-weight: 300;
+    font-size: calc(var(--fs) * 1.75px);
+  }
+
+  .c-card__data-previous {
+    font-size: calc(var(--fs) * 0.75px);
+    color: var(--pale-blue);
+  }
+
+  .c-card--Work {
+    background-color: var(--orange);
+  }
+
+  .c-card--Play {
+    background-color: var(--soft-blue);
+  }
+
+  .c-card--Study {
+    background-color: var(--light-red);
+  }
+
+  .c-card--Exercise {
+    background-color: var(--lime-green);
+  }
+
+  .c-card--Social {
+    background-color: var(--violet);
+  }
+
+  .c-card--Self-Care {
+    background-color: var(--soft-orange);
+  }
+}
