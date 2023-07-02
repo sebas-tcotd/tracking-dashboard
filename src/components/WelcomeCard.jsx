@@ -1,10 +1,16 @@
 import PropTypes from "prop-types";
 import { Timeframes } from "../enums";
 import profilePicture from "../assets/image-jeremy.png";
+import { useState } from "react";
+import { toCapitalCase } from "../utils/capitalCase";
 
 export function WelcomeCard({ onClickTimeframe }) {
-  const handleListItemClick = (timeframe) => {
-    onClickTimeframe(timeframe);
+  const [selectedItem, setSelectedItem] = useState(false);
+  const timeframes = Object.values(Timeframes);
+
+  const handleSelectedItem = (item) => {
+    setSelectedItem(item);
+    onClickTimeframe(item);
   };
 
   return (
@@ -22,24 +28,17 @@ export function WelcomeCard({ onClickTimeframe }) {
       </header>
       <nav className="c-welcome-card__navigation">
         <ul className="c-welcome-card__navigation-items">
-          <li
-            className="c-welcome-card__navigation-item"
-            onClick={() => handleListItemClick(Timeframes.DAILY)}
-          >
-            Daily
-          </li>
-          <li
-            className="c-welcome-card__navigation-item"
-            onClick={() => handleListItemClick(Timeframes.WEEKLY)}
-          >
-            Weekly
-          </li>
-          <li
-            className="c-welcome-card__navigation-item"
-            onClick={() => handleListItemClick(Timeframes.MONTHLY)}
-          >
-            Monthly
-          </li>
+          {timeframes.map((timeframe) => (
+            <li
+              key={timeframe}
+              className={`c-welcome-card__navigation-item ${
+                selectedItem === timeframe ? "u-active" : ""
+              }`}
+              onClick={() => handleSelectedItem(timeframe)}
+            >
+              {toCapitalCase(timeframe)}
+            </li>
+          ))}
         </ul>
       </nav>
     </div>
