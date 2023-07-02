@@ -18,7 +18,7 @@ export function Card({ category, timeframe }) {
       />
       <div className="c-card__body">
         <div className="c-card__heading">
-          <h5 className="c-card__heading-headline">{title}</h5>
+          <h2 className="c-card__heading-headline">{title}</h2>
           <button type="button" className="c-card__heading-button">
             <img src={ellipsisIcon} alt="Ellipsis icon" />
           </button>
